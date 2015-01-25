@@ -67,5 +67,15 @@ say "Installing Composer"
 say "Restarting Apache"
   service apache2 restart > /dev/null 2>&1
 
+say "Changing start directory for Terminal to shared vagrant directory"
+  echo 'cd /vagrant' >> ~/.bashrc
+  say "Adding git config info"
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+  git config --global push.default simple
+  git config --global credential.helper cache
+  git config --global credential.helper 'cache --timeout=3600'
+  git config --global core.autocrlf false
+
 # Let this script know not to run again
 touch /var/vagrant_provision
