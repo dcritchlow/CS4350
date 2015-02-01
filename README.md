@@ -7,4 +7,5 @@
 5. Add your github user.email and user.name to the provision.sh file
 6. Run vagrant up
 7. Run vagrant ssh
+
 Enjoy your linux VM!
